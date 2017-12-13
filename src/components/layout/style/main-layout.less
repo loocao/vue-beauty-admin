@@ -1,0 +1,42 @@
+@import "../../../style/index";
+
+.@{theme-prefix}-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .@{theme-prefix}-sidebar-menu {
+    width: @sidebar-menu-width;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 21;
+    transition: width .3s;
+  }
+
+  .@{theme-prefix}-header {
+    box-sizing: border-box;
+    position: fixed;
+    display: block;
+    padding-left: @sidebar-menu-width;
+    width: 100%;
+    height: @main-header-height;
+    z-index: 20;
+    box-shadow: 0 2px 1px 1px rgba(100, 100, 100, .1);
+    transition: padding .3s;
+  }
+
+  .@{theme-prefix}-page {
+    width: 100%;
+    padding-left: @sidebar-menu-width;
+    position: absolute;
+    top: @main-header-height;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: @main-page-background;
+    z-index: 1;
+    transition: left .3s;
+  }
+}
